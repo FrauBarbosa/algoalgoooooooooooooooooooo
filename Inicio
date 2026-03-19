@@ -16,19 +16,21 @@ body {
 header {
   background: #b22222;
   color: white;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 
+header img {
+  width: 60px;
+  vertical-align: middle;
+}
+
 header h1 {
-  margin: 0;
+  display: inline;
+  margin-left: 10px;
 }
 
-header p {
-  margin: 5px;
-}
-
-/* NAVBAR */
+/* NAV */
 nav {
   background: #003893;
   padding: 10px;
@@ -37,13 +39,9 @@ nav {
 
 nav a {
   color: white;
-  margin: 0 20px;
+  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 /* HERO */
@@ -52,10 +50,6 @@ nav a:hover {
   color: white;
   text-align: center;
   padding: 80px 20px;
-}
-
-.hero h2 {
-  font-size: 32px;
 }
 
 /* CONTAINER */
@@ -73,6 +67,19 @@ nav a:hover {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* IMAGE CARD */
+.img-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
 /* BUTTON */
 .btn {
   display: inline-block;
@@ -81,11 +88,6 @@ nav a:hover {
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 10px;
-}
-
-.btn:hover {
-  background: #002060;
 }
 
 /* FOOTER */
@@ -102,6 +104,7 @@ footer {
 <body>
 
 <header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg">
   <h1>Embassy of Nepal in Brazil</h1>
   <p>Official Diplomatic Mission</p>
 </header>
@@ -109,20 +112,22 @@ footer {
 <nav>
   <a href="#home">Home</a>
   <a href="#services">Services</a>
-  <a href="#about">About</a>
+  <a href="#mission">Mission</a>
+  <a href="#news">News</a>
+  <a href="#gallery">Gallery</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero">
-  <h2>Welcome to the Embassy of Nepal</h2>
-  <p>Strengthening Nepal–Brazil Relations</p>
+  <h2>Strengthening Nepal–Brazil Relations</h2>
+  <p>Consular Services • Cultural Exchange • Diplomacy</p>
 </section>
 
 <div class="container">
 
   <div class="card" id="home">
     <h2>Welcome</h2>
-    <p>The Embassy of Nepal in Brazil provides consular services, promotes bilateral relations, and supports Nepali citizens and Brazilian visitors.</p>
+    <p>The Embassy of Nepal in Brazil promotes diplomatic relations, provides consular services, and supports citizens and visitors.</p>
   </div>
 
   <div class="card" id="services">
@@ -135,9 +140,42 @@ footer {
     <a class="btn" href="#contact">Start Application</a>
   </div>
 
-  <div class="card" id="about">
-    <h2>About the Embassy</h2>
-    <p>The Embassy works to strengthen diplomatic, economic, and cultural relations between Nepal and Brazil.</p>
+  <div class="card" id="mission">
+    <h2>Diplomatic Mission</h2>
+    <p>The Embassy works to strengthen political, economic, and cultural relations between Nepal and Brazil, fostering cooperation and mutual understanding.</p>
+  </div>
+
+  <div class="card" id="news">
+    <h2>Latest News</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Embassy Event</h3>
+        <p>Recent cultural event promoting Nepalese heritage in Brazil.</p>
+      </div>
+      <div class="card">
+        <h3>Diplomatic Meeting</h3>
+        <p>Meeting between Nepalese and Brazilian officials.</p>
+      </div>
+      <div class="card">
+        <h3>Public Notice</h3>
+        <p>New updates on consular services and visa policies.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="gallery">
+    <h2>Gallery</h2>
+    <div class="grid">
+      <div class="img-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg">
+      </div>
+      <div class="img-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Kathmandu_Durbar_Square.jpg">
+      </div>
+      <div class="img-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Lumbini_Birthplace_of_Buddha.jpg">
+      </div>
+    </div>
   </div>
 
   <div class="card" id="contact">
@@ -155,7 +193,3 @@ footer {
 
 </body>
 </html>
-<a class="btn" href="#contact">Start Application</a>
-<h2>Contact / Contato</h2>
-<p>Email: info@nepalembassy.gov.np</p>
-<p><strong>Official Diplomatic Mission</strong></p>
